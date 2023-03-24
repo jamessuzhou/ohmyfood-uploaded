@@ -1,0 +1,15 @@
+body {
+    @include fontRoboto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}  

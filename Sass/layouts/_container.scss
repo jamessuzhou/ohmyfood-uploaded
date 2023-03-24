@@ -1,0 +1,111 @@
+.container {
+    @include flexCenter(column);
+    @include fontType;
+    width: map-get($widths, "100Percent");
+    position: relative;
+
+    &--booking {
+        @extend .container;
+        background-color: $colour-background;
+        padding: 30px 0;
+
+        & .subheading {
+            justify-content: center;
+
+
+        }
+
+        & .info {
+            padding: $somePadding;
+            text-align: center;
+            font-weight: 100;
+        }
+    }
+
+    &--restaurants {
+        @extend .container;
+
+        &__cards {
+            @include flexCenter(column);
+
+            width: 100%;
+            padding: $somePadding 0;
+        }
+    }
+
+
+
+    &--search {
+        @include flexCenter(row);
+        width: map-get($widths, "100Percent");
+        background-color: #EAEAEA;
+        height: 50px;
+        box-shadow: inset 0px 2px 5px 0px lightgray;
+
+        & input {
+            background: transparent;
+            border: 0;
+            outline: none;
+            padding: $somePadding;
+            font-size: large;
+            text-align: center;
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+
+        & ::placeholder {
+            color: black;
+
+
+        }
+
+    }
+
+
+
+    &--howItWorks {
+        @extend .container;
+        padding: 30px 0;
+
+        &--cards {
+            @extend .container;
+        }
+    }
+
+    &--pictureAndMenu {
+        @extend .container;
+    }
+
+    &--order {
+        @extend .container;
+        background-color: rgba(246, 246, 246, .15);
+        padding-bottom: 80px;
+
+
+    }
+
+    &--imageAndMenu {
+        @extend .container;
+
+        &--restaurant-img {
+            height: 300px;
+            width: 100%;
+        }
+
+        &--menuAndHeading {
+            @extend .container;
+            background-color: $colour-background;
+            border-radius: 40px 40px 0 0;
+            margin-top: -40px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.subheading {
+    @include subheadingStyle;
+    @include flexLeft(row);
+    width: map-get($widths, "90Percent");
+}

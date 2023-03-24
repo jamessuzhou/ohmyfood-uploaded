@@ -1,0 +1,32 @@
+footer {
+    @include flexCenter(column);
+    width: map-get($widths, "100Percent");
+    background-color: $charcoal;
+    bottom: 0;
+}
+
+.footer__container {
+    width: map-get($widths, "90Percent");
+    @include flexLeft(column);
+    color: $colour-white;
+    letter-spacing: $spacedLetters;
+
+
+    &__title {
+        @include fontShrikhand;
+        font-size: x-large;
+        margin-top: 18px;
+    }
+
+    &--list {
+
+        & .fa-solid {
+            width: 22px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $colour-white
+        }
+    }
+}

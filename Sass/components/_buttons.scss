@@ -1,0 +1,17 @@
+.button1 {
+    @include gradientButton;
+    @include fontType;
+    box-shadow: $shadow-box;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: $colour-white;
+    width: 50%;
+    cursor: pointer;
+    transition: filter $mediumTime $shortTime, box-shadow $mediumTime;
+
+    &:hover {
+        box-shadow: $shadow-box-dark;
+        filter: brightness(110%);
+    }
+}
